@@ -1,0 +1,18 @@
+name: chroma-memory
+kind: standalone
+version: 0.1.0
+manifest_version: 2
+requires_hermes: ">=0.21.4"
+description: "chroma_recall returns nearest passages from a Chroma collection you already keep. Next turn prefetches from this profile, your server, or Chroma Cloud. Disclosure — reads and writes that collection. Default store, archive, and config.json stay under plugin-data/chroma-memory. CHROMA_PATH reads and writes that absolute path. URL, tenant, database, and key use the secret scope each call. Over plain http, the server key in X-Chroma-Token is sent unencrypted. Cloud sends turns only to api.trychroma.com. Empty-proxy fetch pins onnx.tar.gz, 83178821 bytes, sha256 913d7300ceae3b2dbc2c50d1de4baacab4be7b9380491c27fab7418616a16ec3, host chroma-onnx-models.s3.amazonaws.com, mismatch refused. du -sk with .git is 348. Primary turns have no approval card. Cron and subagent turns stay out. Anyone who can talk to the agent can recall. hermes tools does not stop prefetch. hermes memory off does. Uninstall leaves the collection, the archive, and config.json."
+author: TakeshiTGAL
+license: MIT
+homepage: https://github.com/TakeshiTGAL/hermes-plugin-chroma-memory
+platforms: []
+provides_tools:
+  - chroma_recall
+provides_hooks: []
+python_dependencies:
+  - "chromadb>=1.5.9,<1.6"
+tags:
+  - chroma
+  - memory
